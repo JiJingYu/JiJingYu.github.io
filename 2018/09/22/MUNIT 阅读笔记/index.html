@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | Hexo</title>
+  <title>MUNIT 阅读笔记(未完待续) | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,78 +167,108 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>科技并不会随着时间自己变好，只有当聪明人付出疯狂的努力时才会</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/06/07/2018-05-25/">Neural Networks for Low Level Image Processing（转载）</a></h4>
-                            
-                            <p><time datetime="2018-06-07T13:33:22.000Z"><a href="/2018/06/07/2018-05-25/">2018-06-07</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/06/07/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2018-06-07T13:27:49.000Z"><a href="/2018/06/07/hello-world/">2018-06-07</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-09-22T08:00:00.000Z" itemprop="datePublished">
+          2018-09-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/MUNIT/'>MUNIT</a>
+    
+    
+</span>
+                <h1>MUNIT 阅读笔记(未完待续)</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="munit-阅读笔记未完待续"><a class="markdownIt-Anchor" href="#munit-阅读笔记未完待续"></a> MUNIT 阅读笔记(未完待续)</h1>
+<p>在许多场景中，跨领域的图像转换是多模的，例如冬季到夏季的转换，由于时间、光照等因素的影响，是多模的。然而现有的方法通常会有单模的假设或</p>
+<h2 id="假设"><a class="markdownIt-Anchor" href="#假设"></a> 假设</h2>
+<ul>
+<li>图像的隐空间可以被分解为内容空间和风格空间。</li>
+<li>不同 domain 的图像共享内容空间但是不共享风格空间</li>
+</ul>
+<p>为了转换图像至目标 domain，我们组合图像的内容编码与目标风格空间的随机风格编码。</p>
+<p>内容编码，保留了在转换过程中应当被保留的信息。</p>
+<p>此外，内容和样式空间的分解允许我们的框架执行示例引导的图像转换，其中转换输出的样式由目标域中的用户提供的示例图像控制。</p>
+<p>例如，这个隐空间的编码是图像的噪声强度？是图像的 ISO ？或者是图像的其他。</p>
+<h2 id="约束"><a class="markdownIt-Anchor" href="#约束"></a> 约束</h2>
+<p>图像到图像的翻译是一个病态问题，需要强约束。</p>
+<p>像素值、像素梯度、语义特征、类别标签</p>
+<p>cycle consistency loss，转换图像至目标域再转回来，能够获得原始的图像。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/07/06/Delta Orthogonal Initialization for PyTorch/">
+        Delta Orthogonal Initialization for PyTorch →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
