@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/JiJingYu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>科技并不会随着时间自己变好，只有当聪明人付出疯狂的努力时才会</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
+    </div>
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/06/Delta Orthogonal Initialization for PyTorch/">Delta Orthogonal Initialization for PyTorch</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-06T01:30:00.000Z" itemprop="datePublished">
+          2018-07-06
+      </time>
+    
+    
+    | 
+    <a href='/tags/深度学习-初始化-PyTorch/'>深度学习 初始化 PyTorch</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         Delta Orthogonal Initialization for PyTorch
+ 引言
+最近看到一篇非常有趣的论文，该论文提出了一种卷积权重初始化方法，仅仅使用恰当的初始化机制就能够训练一万层的 CNN  甚至更多层。
+这种方法利用了信号传播的平均场（mean field）理论，以及定义动态等距（dynamical  isometry）、输入-输出雅可比矩阵的奇异值平衡的条件，从理论上导出该初始化机制。这些条件要求卷积算子是正
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/06/Delta Orthogonal Initialization for PyTorch/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/03/一种使hexo支持latex公式的方法/">一种使 hexo 支持 latex 公式的方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-03T14:20:43.000Z" itemprop="datePublished">
+          2018-07-03
+      </time>
+    
+    
+    | 
+    <a href='/tags/hexo-latex/'>hexo latex</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         一种使 hexo 支持 latex 公式的方法
+最近思考如何在个人博客中加入 latex 公式的支持，查阅了一些博客，总结如下：
+ 1. 卸载Marked渲染器，安装Markdown it Plus渲染器
+cd 到你的 blog 目录下执行这两个指令：
+npm uninstall hexo-renderer-marked --save
+npm install hexo-renderer-markdown-it-plus --save
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/03/一种使hexo支持latex公式的方法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/03/一种真实噪声分布模拟方法/">一种真实噪声分布模拟方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-03T12:53:00.000Z" itemprop="datePublished">
+          2018-07-03
+      </time>
+    
+    
+    | 
+    <a href='/tags/噪声分布-GAN-生成对抗/'>噪声分布 GAN 生成对抗</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         一种真实噪声分布模拟方法
+最近看了一篇有趣的文章，该文章提出了一种学习真实噪声分布的方法[1]。
+该方法主要包含噪声区块筛选与基于 GAN 的样本扩充两部分内容。
+ 噪声区块筛选
+在噪声分布的期望为零的假设下，可以通过减去噪声图像中相对平滑的 patch 的平均值来获得近似的噪声 patch。 我们在这里讨论的平滑 patch 指的是内部部件非常相似的区域。
+基于以上假设，作者提出了一种快速平滑区域搜索算法。
+ 平滑区域快速搜索算法
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/03/一种真实噪声分布模拟方法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/19/一个最小 TensorBoard 图像显示 demo/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-19T07:50:46.000Z" itemprop="datePublished">
+          2018-06-19
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        title: 一个最小 TensorBoard 图像显示 demo（未完待续）
+ 一个最小 TensorBoard 图像显示 demo（未完待续）
+ 一个最小 TensorBoard 图像显示 demo
+一个最小 TensorBoard 图像显示 demo，包含了所有必要的操作。
+12345678910111213141516171819202122232425262728293031323334import tensorflow as
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/19/一个最小 TensorBoard 图像显示 demo/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/18/Trails 科学 GUI 绘图库入门/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-18T14:07:13.000Z" itemprop="datePublished">
+          2018-06-18
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        title: Trails  GUI 科学绘图入门（一）
+ Trails  GUI 科学绘图入门（一）
+ 前言
+trails GUI 库 是一个轻量化的绘图库，适用于深度学习、科学计算等场景的绘图。相比于 flask 等库，其具有简单易上手的优点。相比于只能画滚动条的 opencv GUI 库，其具有功能强大的特点。简单易学，功能强大，适合多种科研与研发场景的算法调参与 demo 展示等工作。
+ 安装方式
+推荐使用 pip 安装：
+1p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/18/Trails 科学 GUI 绘图库入门/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/07/2018-06-07/">hexo+github 换了新电脑怎么办</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-07T13:40:51.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         hexo+github 换了新电脑怎么办
+今天写一篇流水账。
+ 准备工作
+
+把之前写的 md 文件都备份一下。
+新电脑安装 Github，安装 hexo
+
+ 配置博客
+
+
+新建目录，例如 jingyu.ji.blog
+
+
+在该目录下运行 hexo init
+
+
+修改 _config.yml 文件，
+12345678deploy:       type: git       branch: master      repository:
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/07/2018-06-07/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/07/2018-05-22/">从拿到新电脑到安装 PyTorch 0.4</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-07T13:33:22.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         新电脑极速安装 PyTorch 0.4
+ 前言
+从拿到新电脑到安装 PyTorch 0.4
+深度学习框架的安装越来越傻瓜式了。
+简单记录下自己安装 PyTorch 的流程。
+ 硬件配置：
+
+GPU：GTX1080Ti x 4
+CPU：E5 2665 x2, 16C 32T
+内存：128 GB
+显示器：4K 渣显示器一台
+
+ 操作系统：
+Ubuntu 16.04
+ 安装过程：
+ install anaconda in new compu
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/07/2018-05-22/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/07/20180522/">这是我的新博客</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-07T13:33:22.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        今年研二了，明年3月就要研究生毕业了。
+回顾研究生阶段，个人成长还是很大的。
+
+工作方面，顺利拿到了地平线机器人的实习offer；
+科研方面，发表了几篇文章，虽然受限于各种客观条件，没能发表过计算机视觉领域三大会议的paper，但是也在子领域的顶级期刊上发表了一些文章，总体来看研究生阶段没有虚度。
+管理方面，从单打独斗到能带领小团队做事，积累了一些经验。带领研究生发文章，指导本科生做项目，学习“宁向东的清华管理学课”等。
+运动方面，顺利
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/07/20180522/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/07/Python3 常用的 logging 配置/">Python3 常用的 logging 配置</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-07T13:33:22.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         Python3 常用的 logging 配置
+ 引言
+好的日志模块对于程序的编写，项目的组织是必不可少的。在编码的过程中，好的日志模块能够帮助 coder 少走很多弯路，在 debug 的过程中，日志能够帮助快速复查与定位问题。
+我们从日志中定位问题，观察程序的运行细节。一个好的日志应当是可以被溯源的。
+一个好的日志应当包含哪些内容呢？
+
+执行的脚本
+当前执行的函数，函数的输入与输出
+详细时间
+必要的事件
+重要的状态变量
+
+ 代码：
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/07/Python3 常用的 logging 配置/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/07/2018-05-25/">Neural Networks for Low Level Image Processing（转载）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-07T13:33:22.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         Neural Networks for Low Level Image Processing
+原文链接：https://holovincent.github.io/2017/11/07/Neural-Networks-for-Low-Level-Image-Processing/
+Until recently, machine learning (ML) or neural networks (NN) are mainly used 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/07/2018-05-25/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/JiJingYu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Neural Networks for Low Level Image Processing（转载） | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/JiJingYu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-06-07T13:33:22.000Z" itemprop="datePublished">
+          2018-06-07
+      </time>
+    
+</span>
+                <h1>Neural Networks for Low Level Image Processing（转载）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="neural-networks-for-low-level-image-processing"><a class="markdownIt-Anchor" href="#neural-networks-for-low-level-image-processing"></a> Neural Networks for Low Level Image Processing</h1>
+<p>原文链接：<a href="https://holovincent.github.io/2017/11/07/Neural-Networks-for-Low-Level-Image-Processing/" target="_blank" rel="noopener">https://holovincent.github.io/2017/11/07/Neural-Networks-for-Low-Level-Image-Processing/</a><br>
+Until recently, machine learning (ML) or neural networks (NN) are mainly used in high level vision tasks, such as image segmentation, object recognition and detection. Low level image processing such as denoising, demosaicing, white balance still mainly rely on signal processing based methods which uses expert designed filters. There are usually a long list of filters in the whole processing pipeline which is run on a dedicated ISP chip. In the past one or two years, there are two new trends. One trend is that more and more researchers propose to apply NN for low level image processing and achieved fascinating performance in term of image quality and processing speed. The other trend is that neural network chip becomes more and more popular at various mobile platform, such as the latest Apple A11 Bionic chip and Huawei Kirin 970 chip. I believe in the near further, NN based methods will play important roles at some low level image processing tasks also some ISP chip may include some NN computing units.</p>
+<p>This is a personal collection of works using neural networks for low level image processing. The list will be regularly updated. You are welcome to contribute. Papers of significance are marked in <strong>bold</strong>. My comments are marked in <em>italic</em>.</p>
+<p>For a up-to-date list, please follow this <a href="https://github.com/holovincent/Neural-Networks-for-Low-Level-Image-Processing" target="_blank" rel="noopener">github repository</a>.</p>
+<h2 id="table-of-contents"><a class="markdownIt-Anchor" href="#table-of-contents"></a> Table of Contents</h2>
+<ul>
+<li><a href="#review-and-comments">Review and comments</a></li>
+<li><a href="#color-constancy">Color constancy</a></li>
+<li><a href="#denoising">Denoising</a></li>
+<li><a href="#demosaicing">Demosaicing</a></li>
+<li><a href="#superresolution">Superresolution</a></li>
+<li><a href="#automatic-adjustment">Automatic adjustment</a></li>
+<li><a href="#artefacts-removal">Artefacts removal</a></li>
+<li><a href="#pipeline">Pipeline</a></li>
+<li><a href="#image-quality-evaluation">Image quality evaluation</a></li>
+<li><a href="#others">Others</a></li>
+</ul>
+<h2 id="review-and-comments"><a class="markdownIt-Anchor" href="#review-and-comments"></a> Review and comments</h2>
+<ul>
+<li><a href="https://sinews.siam.org/Details-Page/deep-deep-trouble" target="_blank" rel="noopener">Deep, Deep Trouble</a>
+<ul>
+<li><em>This is an interesting comments from Michael Elad about the impact of Deep Learning on image processing, mathematics and humanity.</em></li>
+</ul>
+</li>
+<li><a href="https://www.slideshare.net/yuhuang/deep-learning-for-image-video-processing" target="_blank" rel="noopener">Deep learning for image/video processing</a>
+<ul>
+<li><em>Dr. Huang Yu’s summary of DL on image/video processing.</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="color-constancy"><a class="markdownIt-Anchor" href="#color-constancy"></a> Color constancy</h2>
+<ul>
+<li><a href="http://mmlab.ie.cuhk.edu.hk/projects/illuminant_estimation.html" target="_blank" rel="noopener">Deep Specialized Network for Illuminant Estimation</a> (ECCV, 2016, CUHK)</li>
+<li><a href="https://arxiv.org/abs/1508.00998" target="_blank" rel="noopener">Single and Multiple Illuminant Estimation Using Convolutional Neural Networks</a> (TIP, 2017, Italy)
+<ul>
+<li><em>A three-stage method for illuminant estimation from RAW images</em></li>
+</ul>
+</li>
+<li><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Qian_Recurrent_Color_Constancy_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Recurrent Color Constancy</a> (ICCV, 2017, TUT)
+<ul>
+<li><em>Recurrent network for temporal color constancy using multiple frames instead of single frame</em></li>
+</ul>
+</li>
+<li><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Hu_FC4_Fully_Convolutional_CVPR_2017_paper.pdf" target="_blank" rel="noopener">FC4: Fully Convolutional Color Constancy with Confidence-weighted Pooling</a> (CVPR, 2017, THU)
+<ul>
+<li><em>CNN based method using image patches</em></li>
+</ul>
+</li>
+<li><a href="http://digital-library.theiet.org/content/journals/10.1049/iet-ipr.2016.1058" target="_blank" rel="noopener">Natural Image Illuminant Estimation via Deep Non-negative Matrix Factorisation</a> (IET-IP, 2017, OceanUofChina)</li>
+</ul>
+<h2 id="denoising"><a class="markdownIt-Anchor" href="#denoising"></a> Denoising</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1211.1544" target="_blank" rel="noopener"><strong>Image denoising with multi-layer perceptrons</strong></a> (arXiv, 2012)
+<ul>
+<li><em>This is the very first paper using NN to image denoising tasks.</em></li>
+</ul>
+</li>
+<li><a href="https://www.semanticscholar.org/paper/Can-a-Single-Image-Denoising-Neural-Network-Handle-Wang-Morel/c0387d184c2201eb1811094ba259380b5a83b6a4" target="_blank" rel="noopener">Can a Single Image Denoising Neural Network Handle All Levels of Gaussian Noise?</a> (SPL, 2014, France)
+<ul>
+<li><em>This paper proposal a way to apply NN on image denoising with different noise level of Gaussian noise.</em></li>
+</ul>
+</li>
+<li><a href="http://ieeexplore.ieee.org/document/7341021/" target="_blank" rel="noopener">Deep convolutional architecture for natural image denoising</a> (WCSP, 2015, ZJU)</li>
+<li><a href="https://arxiv.org/abs/1704.03264" target="_blank" rel="noopener">Learning Deep CNN Denoiser Prior for Image Restoration</a> (arXiv, 2017, HKPolyU)</li>
+<li><a href="http://ieeexplore.ieee.org/document/7839189/" target="_blank" rel="noopener">Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising</a> (TIP, 2017, HKPolyU)</li>
+<li><a href="https://arxiv.org/abs/1710.04026" target="_blank" rel="noopener">FFDNet: Toward a Fast and Flexible Solution for CNN based Image Denoising</a> (arXiv, 2017, HKPolyU)</li>
+<li><a href="http://ieeexplore.ieee.org/document/8026108/" target="_blank" rel="noopener">Image Restoration: From Sparse and Low-Rank Priors to Deep Priors</a> (IPM, 2017, HKPolyU)
+<ul>
+<li><em>This is a review paper.</em></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/1708.05473" target="_blank" rel="noopener">Dilated Deep Residual Network for Image Denoising</a> (arXiv, 2017, SIU)</li>
+<li><a href="http://www.eecg.toronto.edu/~mostafam/files/IDEAL_Image_DEnoising_AcceLerator.pdf" target="_blank" rel="noopener">IDEAL: Image DEnoising AcceLerator</a> (ACM, 2017, UToronto&amp;Algolux)
+<ul>
+<li><em>A NN based approximations of BM3D on an NN accelerator</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="demosaicing"><a class="markdownIt-Anchor" href="#demosaicing"></a> Demosaicing</h2>
+<ul>
+<li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/3962/1/Demosaicking-using-artificial-neural-networks/10.1117/12.382904.short?SSO=1" target="_blank" rel="noopener">Demosaicing using artificial neural networks</a> (SPIE, 2000)</li>
+<li><a href="https://www.semanticscholar.org/paper/A-multilayer-neural-network-for-image-demosaicking-Wang/4264e3560bf59bfdb9f262a9787187257a1ce75f" target="_blank" rel="noopener">A multilayer neural network for image demosaicking</a> (ICIP, 2012)</li>
+<li><a href="https://groups.csail.mit.edu/graphics/demosaicnet/" target="_blank" rel="noopener">Deep Joint Demosaicking and Denoising</a> (Siggraph, 2016, MIT&amp;Adobe)
+<ul>
+<li><em>This paper propose to use more difficult patches for the training.</em></li>
+<li><em>Data and code are available on Github.</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="automatic-adjustment"><a class="markdownIt-Anchor" href="#automatic-adjustment"></a> Automatic adjustment</h2>
+<p>From the publications, we can find that Adobe has done a lot of work pushing the usage of machine learning in low-level image processing especially automatic photo adjustment.</p>
+<ul>
+<li><a href="http://people.csail.mit.edu/vladb/photoadjust/" target="_blank" rel="noopener">Learning Photographic Global Tonal Adjustment with a Database of Input / Output Image Pairs</a> (CVPR, 2011, MIT&amp;Adobe)
+<ul>
+<li><em>Adjustment personalization</em></li>
+</ul>
+</li>
+<li><a href="https://sites.google.com/site/homepagezhichengyan/home/dl_img_adjust" target="_blank" rel="noopener">Automatic Photo Adjustment Using Deep Neural Networks</a> (ACM, 2016, UIUC&amp;Adobe&amp;Microsoft)
+<ul>
+<li><em>This technique is more accurate and supports local edits.</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="superresolution"><a class="markdownIt-Anchor" href="#superresolution"></a> Superresolution</h2>
+<p>Super-resolution is one of the areas that NN has been applied extensively and achieved great success.</p>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/document/7410407/" target="_blank" rel="noopener">Deep Networks for Image Super-Resolution with Sparse Prior</a> (ICCV, 2015, UIUC)</li>
+<li><a href="https://ieeexplore.ieee.org/document/7115171/" target="_blank" rel="noopener">Image superresolution using deep convolutional networks</a> (TPAMI, 2015, HKUST)</li>
+<li><a href="https://arxiv.org/abs/1511.04587" target="_blank" rel="noopener">Accurate image super-resolution using very deep convolutional networks</a> (CVPR, 2016, Seoul Univ.)</li>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Real-Time_Single_Image_CVPR_2016_paper.pdf" target="_blank" rel="noopener"><strong>Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network</strong></a> (CVPR, 2016, ICL)
+<ul>
+<li><em>An order of magnitude faster than previous CNN-based methods</em></li>
+</ul>
+</li>
+<li><a href="http://cvlab.cse.msu.edu/project-super-resolution.html" target="_blank" rel="noopener">Image Super-Resolution via Deep Recursive Residual Network</a> (CVPR, 2017, MSU)</li>
+<li><a href="https://arxiv.org/abs/1609.04802" target="_blank" rel="noopener">Photo-realistic single image super-resolution using a generative adversarial network</a> (CVPR, 2017, Twitter)</li>
+</ul>
+<h2 id="artefacts-removal"><a class="markdownIt-Anchor" href="#artefacts-removal"></a> Artefacts removal</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1704.02518" target="_blank" rel="noopener">Deep Generative Adversarial Compression Artifact Removal</a> (arXiv, 2017, UoFlorence)</li>
+<li><a href="https://arxiv.org/abs/1708.00187" target="_blank" rel="noopener">Real-time Deep Video Deinterlacing</a> (arXiv, 2017, CUHK)</li>
+</ul>
+<h2 id="pipeline"><a class="markdownIt-Anchor" href="#pipeline"></a> Pipeline</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1605.09336" target="_blank" rel="noopener">Learning the image processing pipeline</a> (arXiv, 2016, Stanford)
+<ul>
+<li><em>Propose to learn the filter parameters by ML</em></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/1610.09414" target="_blank" rel="noopener">Learning Adaptive Parameter Tuning for Image Processing</a> (arXiv, 2016, UCLA&amp;Nvidia)</li>
+</ul>
+<h2 id="image-quality-evaluation"><a class="markdownIt-Anchor" href="#image-quality-evaluation"></a> Image quality evaluation</h2>
+<ul>
+<li><a href="http://www.ivl.disco.unimib.it/activities/deep-image-quality/" target="_blank" rel="noopener">Deep Learning for Blind Image Quality Assessment</a> (2017, Unimib)</li>
+</ul>
+<h2 id="others"><a class="markdownIt-Anchor" href="#others"></a> Others</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=eQyfHgLx8Dc&amp;feature=youtu.be" target="_blank" rel="noopener">Fast Image Processing with Fully-Convolutional Networks</a> (ICCV, 2017, Intel)
+<ul>
+<li><em>Operator approximation to accelerate image processing tasks</em></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/pdf/1704.03488.pdf" target="_blank" rel="noopener">Learning Proximal Operators:Using Denoising Networks for Regularizing Inverse Imaging Problems</a> (arXiv, 2017, TUM)
+<ul>
+<li><em>This paper proposes a way to use NN for the the general fidelity plus regularization optimization problem which may find applications in many problems.</em></li>
+</ul>
+</li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/06/07/Python3 常用的 logging 配置/" style="float: left;">
+        ← Python3 常用的 logging 配置
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/06/07/hello-world/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/JiJingYu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
